@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/Regular_login_1c.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="click">Click Me</button>
+    <!-- popup -->
+    <section id="show" class="recipe-popup">
+      <div class="recipe-inner">
+        <div class="login-area">
+          <div class="modal-top">
+            <img src="./images/left-logo.webp" alt="" />
+          </div>
+          <div class="modal-item-left">
+            <h3>Log in</h3>
+            <form action="">
+              <div class="form">
+                <div class="my-3">
+                  <label for="username">Email or username</label>
+                  <input type="text" id="username" class="form-control" />
+                </div>
+                <div class="my-3 icon-set">
+                  <label for="password">password</label>
+                  <input type="text" id="password" class="form-control" />
+                  <img
+                    id="togglePassword"
+                    alt="Toggle Password"
+                    class="eye-icon"
+                    src="./images/view.svg"
+                  />
+                  <p>oops! email and/or password are incorrect.</p>
+                </div>
+              </div>
+            </form>
+            <button class="btn btn-lg">log in</button>
+            <a href="#" class="btn-text">forgot password?</a>
+            <p class="border-text">or</p>
+            <a class="btn btn-xl" href="#"
+              ><img src="./images/googlesvg.svg" alt="" />log in with Google</a
+            >
+            <a class="btn btn-xl btn-mobile" href="#"
+              ><img class="img-1" src="./images/apple.svg" alt="" />log in with
+              apple</a
+            >
+            <p class="btn-text">
+              don't have an account yet?
+              <a class="link-text" href="#">register</a>
+            </p>
+          </div>
+          <div class="modal-item-right">
+            <img src="./images/Marni for desktop.png" alt="Marni" />
+            <button id="close-popup1" class="btn-cross">&times;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      //password hide show
+      const passwordField = document.getElementById("password");
+      const toggleButton = document.getElementById("togglePassword");
+
+      toggleButton.addEventListener("click", function () {
+        if (passwordField.type === "password") {
+          passwordField.type = "text";
+        } else {
+          passwordField.type = "password";
+        }
+      });
+    </script>
+    <script src="js/login.js"></script>
+  </body>
+</html>
